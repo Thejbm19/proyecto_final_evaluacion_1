@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class SpawnCoin : MonoBehaviour
 {
     public float randomRangeX;
     public float randomRangeY;
@@ -10,18 +10,15 @@ public class SpawnManager : MonoBehaviour
     public float MaxRangex = 200f;
     public float MaxRangey = 200f;
     public float MaxRangez = 200f;
-    public GameObject prefabObs;
-
-
-     void Start()
-     {
-        InvokeRepeating("SpawnObstacle",2f,5f);
-
-     }
+    // Start is called before the first frame update
+    void Start()
+    {
+        transform.position = RandomPosition();
+    }
 
     // Update is called once per frame
     void Update()
-    { 
+    {
         
     }
 
@@ -32,10 +29,4 @@ public class SpawnManager : MonoBehaviour
         randomRangeZ = Random.Range(-MaxRangez, MaxRangez);
         return new Vector3(randomRangeX, randomRangeY, randomRangeZ);
     }
-
-    public void SpawnObstacle()
-    {
-        Instantiate(prefabObs,RandomPosition(), prefabObs.transform.rotation);
-    }
- 
 }

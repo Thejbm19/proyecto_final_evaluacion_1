@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OutOfBounds : MonoBehaviour
 {
-    private float upperLim = 30f;
+    
 
     private float xlimitMax = 400f;
     private float ylimitMax = 400f;

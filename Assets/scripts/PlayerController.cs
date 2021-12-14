@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 startPos = new Vector3(0, 100, 0);
     public GameObject projectilePrefab;
     private int coins;
-    public GameObject coinPrefab;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -69,13 +69,18 @@ public class PlayerController : MonoBehaviour
 
 
     }
-    private void OnCollisionEnter(Collision otherCollider)
+    private void OnTriggerEnter(Collider otherCollider)
     {
 
-        if (gameObject.CompareTag("moneda"))
+        if (otherCollider.gameObject.CompareTag("moneda"))
         {
             coins = coins +1;
-            Destroy(coinPrefab);
+            Destroy(otherCollider.gameObject);
+            if (coins >= 10)
+            {
+                Debug.Log("Has recolectado 10 coins, Has ganado");
+                Time.timeScale = 0f;
+            }
         }
     }
 }

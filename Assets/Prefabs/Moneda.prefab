@@ -11,10 +11,12 @@ GameObject:
   - component: {fileID: 1244678396489639985}
   - component: {fileID: 1244678396489639984}
   - component: {fileID: 1244678396489639999}
-  - component: {fileID: 1244678396489639998}
   - component: {fileID: 1508373928230728320}
+  - component: {fileID: -5802658603388192065}
+  - component: {fileID: -6657432673944787356}
+  - component: {fileID: -3478988550102105258}
   m_Layer: 0
-  m_Name: moneda
+  m_Name: Moneda
   m_TagString: moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1244678396489639998
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244678396489639996}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1508373928230728320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,3 +98,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 50
+--- !u!114 &-5802658603388192065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244678396489639996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab7140ef62c42c4285d1ea2c5f4f2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRangeX: 0
+  randomRangeY: 0
+  randomRangeZ: 0
+  MaxRangex: 200
+  MaxRangey: 200
+  MaxRangez: 200
+--- !u!65 &-6657432673944787356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244678396489639996}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-3478988550102105258
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244678396489639996}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

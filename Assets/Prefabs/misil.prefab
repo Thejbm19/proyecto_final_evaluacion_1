@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7874634953112260751}
   - component: {fileID: 2452308487082196205}
-  - component: {fileID: 5999955639546235090}
   - component: {fileID: -6088576458812231120}
   - component: {fileID: 5219035160295517027}
   - component: {fileID: -2581459307694761303}
+  - component: {fileID: -752886646549234641}
   m_Layer: 0
   m_Name: misil
   m_TagString: misil
@@ -52,22 +52,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0190735, y: 0.4956646, z: 1}
   m_Center: {x: 0.092227936, y: 0.0021219254, z: 0}
---- !u!54 &5999955639546235090
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5600335967223704253}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &-6088576458812231120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be5e2abc8439bf44a05117f06fa9086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 50
 --- !u!114 &5219035160295517027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +89,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0c33732aed71043be285733f79ebf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &-752886646549234641
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600335967223704253}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6631357629194401043
 GameObject:
   m_ObjectHideFlags: 0
