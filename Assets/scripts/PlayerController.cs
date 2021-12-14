@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     private float yRange = 200f;
     private float zRange = 200f;
     private Vector3 startPos = new Vector3(0, 100, 0);
+    public GameObject projectilePrefab;
+    private int coins;
+    public GameObject coinPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,5 +62,20 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, -zRange);
         }
 
+        if (Input.GetKeyDown(KeyCode.RightControl))
+        {
+            Instantiate(projectilePrefab, transform.position, transform.rotation);
+        }
+
+
+    }
+    private void OnCollisionEnter(Collision otherCollider)
+    {
+
+        if (gameObject.CompareTag("moneda"))
+        {
+            coins = coins +1;
+            Destroy(coinPrefab);
+        }
     }
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - obstaculo
   - moneda
+  - misil
+  - player
   layers:
   - Default
   - TransparentFX
